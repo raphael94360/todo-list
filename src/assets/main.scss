@@ -1,23 +1,72 @@
+@import "./media.scss";
+
 main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 
-  .task {
+  .task-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 280px;
+      height: 40px;
+      margin-bottom: 15px;
+      padding: 0 15px;
+      border: 1px solid rgb(11, 102, 182);
+      border-radius: 5px;
+      background-color: rgb(11, 102, 182);
+
+      @include small {
+        width: 460px;
+      }
+
+      p {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .done {
+        text-decoration: line-through;
+      }
+
+      span {
+        color: white;
+      }
+    }
   }
 
   .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 50px;
+
+    @include small {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
     input {
-      width: 350px;
+      width: 280px;
       height: 40px;
       outline: none;
-      border: 1px solid black;
+      border: 1px solid rgb(11, 102, 182);
       border-radius: 5px;
       background-color: #ddd;
       padding-left: 15px;
       font-size: 1.5rem;
       font-style: italic;
+
+      @include small {
+        width: 400px;
+      }
     }
 
     input::placeholder {
@@ -25,6 +74,22 @@ main {
       color: rgb(11, 102, 182);
       font-style: italic;
       opacity: 40%;
+    }
+
+    button {
+      height: 45px;
+      width: 130px;
+      border: 1px solid rgb(11, 102, 182);
+      border-radius: 5px;
+      cursor: pointer;
+      @include small {
+        width: 100px;
+      }
+    }
+
+    button:hover {
+      background-color: rgb(11, 102, 182);
+      color: white;
     }
   }
 }
