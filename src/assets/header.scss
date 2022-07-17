@@ -1,7 +1,7 @@
 @import "./media.scss";
 
 header {
-  width: 320px;
+  min-width: 280px;
   height: 100px;
   margin: 30px 0;
   display: flex;
@@ -11,7 +11,15 @@ header {
   border-bottom: 1px solid #ddd;
 
   @include small {
-    width: 460px;
+    min-width: 460px;
+  }
+
+  @include medium {
+    min-width: 728px;
+  }
+
+  @include large {
+    min-width: 1024px;
   }
 
   h1 {

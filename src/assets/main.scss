@@ -3,17 +3,27 @@
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   .task-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    @include small {
+      max-width: 500px;
+    }
+
+    @include medium {
+      max-width: 768px;
+    }
 
     .task {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 280px;
+      min-width: 260px;
       height: 40px;
       margin-bottom: 15px;
       padding: 0 15px;
@@ -22,7 +32,11 @@ main {
       background-color: rgb(11, 102, 182);
 
       @include small {
-        width: 460px;
+        min-width: 460px;
+      }
+
+      @include medium {
+        min-width: 650px;
       }
 
       p {

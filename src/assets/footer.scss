@@ -1,11 +1,10 @@
 footer {
   display: flex;
   justify-content: center;
-
   .footer-container {
-    position: absolute;
-    bottom: 0;
     height: 50px;
     margin: 30px 0;
+    // position: absolute;
+    // bottom: 0;
   }
 }

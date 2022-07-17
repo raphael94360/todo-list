@@ -1,15 +1,10 @@
 body {
-  position: relative;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  // display: flex;
-  // justify-content: center;
-  height: 100vh;
+  background-color: rgb(243, 249, 255);
 }
 
 .App {
-  // display: flex;
-  // justify-content: center;
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 20px;
